@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Pessoal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+       html, body {
+            height: 100%;
+            margin: 0;
+            background-image: url('https://i.postimg.cc/pLjYwKDz/M-dia-10.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #343a40;
+            color: #f8f9fa;
+        }
+        header {
+            background-color: #495057;
+            color: white;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+        main {
+            height: calc(100% - 100px);
+            padding: 20px;
+            overflow-y: auto;
+        }
+        section {
+            background-color: #495057;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        .list-group-item {
+            cursor: pointer;
+            transition: background-color 0.3s;
+            background-color: #6c757d;
+            color: #f8f9fa;
+        }
+        .list-group-item:hover {
+            background-color: #5a6268;
+        }
+        h2 {
+            color: #ffc107;
+        }
+        .img-discipline {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>Meu Site Pessoal</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('boas-vindas')">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('humanas')">Ciências Humanas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('natureza')">Ciências da Natureza</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('linguagens')">Linguagens</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('matematica')">Matemática</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('iot')">IoT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('pagina-pessoal')">Página Pessoal</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="boas-vindas">
+            <h2>Bem-vindo ao Meu Site Pessoal!</h2>
+            <p>
+                Este site é um espaço dedicado ao aprendizado e compartilhamento de conhecimento nas diferentes áreas do saber.
+                Aqui você encontrará informações sobre as disciplinas que estudei. Navegue pelas seções para explorar cada área do saber!
+            </p>
+        </section>
+
+        <section id="humanas" class="d-none">
+            <h2>Ciências Humanas</h2>
+            <ul class="list-group mb-3">
+                <li class="list-group-item" onclick="showTask('humanas', 'historia')">História</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#historia">Ver Detalhes</button>
+                <div id="historia" class="collapse">
+                <img src="https://i.postimg.cc/SQc8dmfN/M-dia-5.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+                <li class="list-group-item" onclick="showTask('humanas', 'geografia')">Geografia</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#geografia">Ver Detalhes</button>
+                <div id="geografia" class="collapse">
+                <img src="https://i.postimg.cc/Wpqq3THw/shared-image-1.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+                <li class="list-group-item" onclick="showTask('humanas', 'filosofia')">Filosofia</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#filosofia">Ver Detalhes</button>
+                <div id="filosofia" class="collapse">
+                <img src="https://i.postimg.cc/SsTPtWhC/M-dia-6.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+               
+                <div>
+                </div>
+
+                <li class="list-group-item" onclick="showTask('humanas', 'sociologia')">Sociologia</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#sociologia">Ver Detalhes</button>
+                <div id="sociologia" class="collapse">
+                <img src="https://i.postimg.cc/XNPhfcx0/M-dia-7.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+
+            </ul>
+            <div id="task-info-humanas" class="d-none">
+                <img src="caminho/para/imagem-historia.jpg" class="img-discipline" alt="História">
+            </div>
+        </section>
+
+        <section id="natureza" class="d-none">
+            <h2>Ciências da Natureza</h2>
+            <ul class="list-group mb-3">
+
+                <li class="list-group-item" onclick="showTask('natureza', 'fisica')">Física</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#fisica">Ver Detalhes</button>
+                <div id="fisica" class="collapse">
+                <img src="https://i.postimg.cc/136WbHKy/M-dia-2.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+                <li class="list-group-item" onclick="showTask('natureza', 'quimica')">Química</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#quimica">Ver Detalhes</button>
+                <div id="quimica" class="collapse">
+                <img src="https://i.postimg.cc/QMdTm5xp/M-dia-3.jpg
+                " alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+                <li class="list-group-item" onclick="showTask('natureza', 'biologia')">Biologia</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#biologia">Ver Detalhes</button>
+                <div id="biologia" class="collapse">
+                <img src="https://i.postimg.cc/vZgRV259/M-dia-4.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+            </ul>
+            <div id="task-info-natureza" class="d-none">
+                <img src="caminho/para/imagem-fisica.jpg" class="img-discipline" alt="Física">
+            </div>
+        </section>
+
+        <section id="linguagens" class="d-none">
+            <h2>Linguagens</h2>
+            <ul class="list-group mb-3">
+                <li class="list-group-item" onclick="showTask('linguagens', 'portugues')">Português</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#portugues">Ver Detalhes</button>
+                <div id="portugues" class="collapse">
+                <img src="https://i.postimg.cc/FzNgTZFJ/Smart-Select-20241124-201018-Teams.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+                <li class="list-group-item" onclick="showTask('linguagens', 'ingles')">Inglês</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#ingles">Ver Detalhes</button>
+                <div id="ingles" class="collapse">
+                <img src="https://i.postimg.cc/BnX57t3N/Smart-Select-20241124-195235-Teams.jpg tem menu de contexto" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+                <li class="list-group-item" onclick="showTask('linguagens', 'artes')">Artes</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#artes">Ver Detalhes</button>
+                <div id="artes" class="collapse">
+                <img src="https://i.postimg.cc/XqjdfYxf/Smart-Select-20241124-200426-Teams.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+
+                <li class="list-group-item" onclick="showTask('linguagens', 'educacao_fisica')">Educação Física</li>
+                    <button class="btn btn-info" data-toggle="collapse" data-target="#educacao_fisica">Ver Detalhes</button>
+                    <div id="educacao_fisica" class="collapse">
+                <img src="https://i.postimg.cc/x1wdJzNf/shared-image.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+            </ul>
+            <div id="task-info-linguagens" class="d-none">
+                <img src="c:\Users\SAMSUNG\Downloads\Mídia (9).jpeg" class="img-discipline" alt="Português">
+            </div>
+        </section>
+
+        <section id="matematica" class="d-none">
+            <h2>Matemática</h2>
+            <ul class="list-group mb-3">
+                <li class="list-group-item" onclick="showTask('matematica', 'matematica')">Matemática</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#matematica">Ver Detalhes</button>
+                <div id="matematica" class="collapse">
+                <img src="https://i.postimg.cc/g0yWCzqL/Smart-Select-20241124-195311-Teams.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+                <li class="list-group-item" onclick="showTask('matematica', 'estatistica')">Estatística</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#estatistica">Ver Detalhes</button>
+                <div id="estatistica" class="collapse">
+                  <img src="https://i.postimg.cc/g0yWCzqL/Smart-Select-20241124-195311-Teams.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+                <div>
+                </div>
+            </ul>
+            <div id="task-info-matematica" class="d-none">
+            </div>
+        </section>
+
+        <section id="iot" class="d-none">
+            <h2>Internet das Coisas (IoT)</h2>
+            <ul class="list-group mb-3">
+                <li class="list-group-item" onclick="showTask('iot', 'introducao')">Introdução à IoT</li>
+                <li class="list-group-item" onclick="showTask('iot', 'aplicacoes')">Aplicações Práticas</li>
+                <li class="list-group-item" onclick="showTask('iot', 'projetos')">Projetos Inovadores</li>
+            </ul>
+            <div id="task-info-iot" class="d-none"></div>
+        </section>
+
+        <section id="pagina-pessoal" class="d-none">
+            <h2>Minha Página Pessoal</h2>
+            <div>
+                <h3>Informações Pessoais</h3>
+                <p><strong>Nome:</strong> Felipe Costa Marangoni</p>
+                <p><strong>Interesses:</strong> Tenho interesse por esportes e tecnologia</p>
+                <p><strong>Hobbies:</strong> Gosto de jogar volêi e tocar violino</p>
+            </div>
+            <div>
+                <h3>Reflexão sobre o Ensino Médio</h3>
+                <p>O ensino médio foi uma fase cheia de desafios e aprendizados, onde desenvolvi habilidades importantes para meu futuro.</p>
+            </div>
+            <div>
+                <h3>Tarefas Favoritas e o que Aprendi</h3>
+                <ul>
+                    <li><strong>Projeto de Matemática:</strong> Pensamento lógico.</li>
+                    <li><strong>Experimentos de Química:</strong> Método científico.</li>
+                    <li><strong>Apresentações em História:</strong> Comunicação e pesquisa.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Meu Site Pessoal. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showSection(section) {
+            // Esconde todas as seções
+            document.querySelectorAll('section').forEach(function(sec) {
+                sec.classList.add('d-none');
+            });
+            // Exibe a seção selecionada
+            document.getElementById(section).classList.remove('d-none');
+        }
+
+        function showTask(section, subject) {
+            // Esconde todas as informações de tarefas
+            document.querySelectorAll(`#task-info-${section}`).forEach(function(task) {
+                task.classList.add('d-none');
+            });
+            // Exibe as informações da disciplina selecionada
+            const taskInfo = document.getElementById(`task-info-${section}`);
+            taskInfo.classList.remove('d-none');
+            taskInfo.innerHTML = `<p>Informações sobre <strong>${subject}</strong> em breve...</p>`;
+        }
+    </script>
+</body>
+</html>
