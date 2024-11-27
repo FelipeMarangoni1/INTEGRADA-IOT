@@ -13,7 +13,7 @@
             margin: 0;
             background-image: url('https://i.postimg.cc/pLjYwKDz/M-dia-10.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: centesr;
             color: #fff;
             overflow-x: hidden;
         }
@@ -289,26 +289,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function showSection(section) {
-            // Esconde todas as seções
-            document.querySelectorAll('section').forEach(function(sec) {
-                sec.classList.add('d-none');
-            });
-            // Exibe a seção selecionada
-            document.getElementById(section).classList.remove('d-none');
-        }
-
-        function showTask(section, subject) {
-            // Esconde todas as informações de tarefas
-            document.querySelectorAll(`#task-info-${section}`).forEach(function(task) {
-                task.classList.add('d-none');
-            });
-            // Exibe as informações da disciplina selecionada
-            const taskInfo = document.getElementById(`task-info-${section}`);
-            taskInfo.classList.remove('d-none');
-            taskInfo.innerHTML = `<p>Informações sobre <strong>${subject}</strong> em breve...</p>`;
-        }
-    </script>
+    <script src="interação.js"></script>
 </body>
 </html>
