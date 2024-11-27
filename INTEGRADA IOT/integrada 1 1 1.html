@@ -251,18 +251,26 @@
 
         <section id="pagina-pessoal" class="d-none">
             <h2>Minha Página Pessoal</h2>
-            <div>
-                <h3>Informações Pessoais</h3>
+            <ul class="list-group mb-3">
+                <li class="list-group-item" onclick="showTask('Informações Pessoais')">Informações Pessoais</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="InformaçõesPessoais">Ver Detalhes</button>
+                <div id="InformaçõesPessoais" class="collapse">
                 <p><strong>Nome:</strong> Felipe Costa Marangoni</p>
                 <p><strong>Interesses:</strong> Tenho interesse por esportes e tecnologia</p>
                 <p><strong>Hobbies:</strong> Gosto de jogar volêi e tocar violino</p>
             </div>
             <div>
-                <h3>Reflexão sobre o Ensino Médio</h3>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item" onclick="showTask('ReflexãosobreoEnsinoMédio')">Reflexão sobre o Ensino médio</li>
+                    <button class="btn btn-info" data-toggle="collapse" data-target="#atividadedoboné">Ver Detalhes</button>
+                    <div id="ReflexãosobreoEnsinoMédio" class="collapse">
                 <p>O ensino médio foi uma fase cheia de desafios e aprendizados, onde desenvolvi habilidades importantes para meu futuro.</p>
             </div>
             <div>
-                <h3>Tarefas Favoritas e o que Aprendi</h3>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item" onclick="showTask('Tarefas')">Tarefas Favoritas e o que Aprendi</li>
+                    <button class="btn btn-info" data-toggle="collapse" data-target="#atividadedoboné">Ver Detalhes</button>
+                    <div id="Tarefas" class="collapse">
                 <ul>
                     <li><strong>Projeto de Matemática:</strong> Pensamento lógico.</li>
                     <li><strong>Experimentos de Química:</strong> Método científico.</li>
