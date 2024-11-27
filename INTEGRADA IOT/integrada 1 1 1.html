@@ -250,34 +250,35 @@
         </section>
 
         <section id="pagina-pessoal" class="d-none">
-            <h2>Minha Página Pessoal</h2>
+            <h2>Página Pessoal</h2>
             <ul class="list-group mb-3">
-                <li class="list-group-item" onclick="showTask('Informações Pessoais')">Informações Pessoais</li>
-                <button class="btn btn-info" data-toggle="collapse" data-target="InformaçõesPessoais">Ver Detalhes</button>
-                <div id="InformaçõesPessoais" class="collapse">
-                <p><strong>Nome:</strong> Felipe Costa Marangoni</p>
-                <p><strong>Interesses:</strong> Tenho interesse por esportes e tecnologia</p>
-                <p><strong>Hobbies:</strong> Gosto de jogar volêi e tocar violino</p>
-            </div>
-            <div>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item" onclick="showTask('ReflexãosobreoEnsinoMédio')">Reflexão sobre o Ensino médio</li>
-                    <button class="btn btn-info" data-toggle="collapse" data-target="#atividadedoboné">Ver Detalhes</button>
-                    <div id="ReflexãosobreoEnsinoMédio" class="collapse">
-                <p>O ensino médio foi uma fase cheia de desafios e aprendizados, onde desenvolvi habilidades importantes para meu futuro.</p>
-            </div>
-            <div>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item" onclick="showTask('Tarefas')">Tarefas Favoritas e o que Aprendi</li>
-                    <button class="btn btn-info" data-toggle="collapse" data-target="#atividadedoboné">Ver Detalhes</button>
-                    <div id="Tarefas" class="collapse">
-                <ul>
+                <li class="list-group-item" onclick="showTask('pessoal', 'informacoes_pessoais')">Informações Pessoais</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#informacoes_pessoais">Ver Detalhes</button>
+                <div id="informacoes_pessoais" class="collapse">
+                    <p>Nome:Felipe Costa Marangoni</p>
+                    <p>Interesses:Tenho interesse por esportes e tecnologia</p>
+                    <p>Hobbies: Gosto de jogar volêi e tocar violino</p>    
+                </div>
+                 <li class="list-group-item" onclick="showTask('pessoal', 'reflexao')">Reflexão</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#reflexao">Ver Detalhes</button>
+                <div id="reflexao" class="collapse">
+                    <p>O ensino médio foi uma fase cheia de desafios e aprendizados, onde desenvolvi habilidades importantes para meu futuro.</p>
+                </div>
+        
+                <li class="list-group-item" onclick="showTask('pessoal', 'tarefas_favoritas')">Tarefas Favoritas</li>
+                <button class="btn btn-info" data-toggle="collapse" data-target="#tarefas_favoritas">Ver Detalhes</button>
+                <div id="tarefas_favoritas" class="collapse">
                     <li><strong>Projeto de Matemática:</strong> Pensamento lógico.</li>
                     <li><strong>Experimentos de Química:</strong> Método científico.</li>
                     <li><strong>Apresentações em História:</strong> Comunicação e pesquisa.</li>
-                </ul>
+
+                </div>
+            </ul>
+            <div id="task-info-pessoal" class="d-none">
+                <p>Detalhes adicionais sobre as tarefas pessoais.</p>
             </div>
         </section>
+        
     </main>
 
     <footer class="text-center py-3">
